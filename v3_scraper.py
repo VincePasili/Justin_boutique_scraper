@@ -145,7 +145,7 @@ def main():
     ##############
     with sync_playwright() as p:
         # Launch a single browser instance for Google Maps scraping
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
         page.goto("https://www.google.com/maps", timeout=60000)
@@ -155,7 +155,7 @@ def main():
             print(f"--- Search {idx+1}/{len(search_list)}: {search_for} ---")
 
             page.locator('//input[@id="searchboxinput"]').fill(search_for)
-            page.wait_for_timeout(2000)
+            page.wait_for_timeout(5000)
 
             page.keyboard.press("Enter")
             page.wait_for_timeout(5000)
@@ -166,7 +166,7 @@ def main():
             previously_counted = 0
             while True:
                 page.mouse.wheel(0, 10000)
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(5000)
 
                 current_count = page.locator(
                     '//a[contains(@href, "https://www.google.com/maps/place")]'
