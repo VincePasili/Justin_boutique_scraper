@@ -9,3 +9,5 @@ python-dateutil
 pytz
 six
 typing_extensions
+requests
+bs4
