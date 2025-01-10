@@ -14,3 +14,4 @@ bs4
 supabase
 python-dotenv
 validate_email_address
+beautifulsoup4

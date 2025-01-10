@@ -1,0 +1,29 @@
+{pkgs}: {
+  deps = [
+    pkgs.python311Packages.playwright
+    pkgs.python312Packages.playwright
+    pkgs.playwright
+    pkgs.playwright-driver
+    pkgs.gitFull
+    pkgs.glibcLocales
+    pkgs.libnss
+    pkgs.nss
+    pkgs.dbus
+    pkgs.atk
+    pkgs.atk.bridge
+    pkgs.cups
+    pkgs.libdrm
+    pkgs.expat
+    pkgs.libXcomposite
+    pkgs.libXdamage
+    pkgs.libXfixes
+    pkgs.gbm
+    pkgs.libxcb
+    pkgs.xkbcommon
+    pkgs.pango
+    pkgs.cairo
+    pkgs.systemd
+    pkgs.alsaLib
+    pkgs.at-spi2-core
+  ];
+}

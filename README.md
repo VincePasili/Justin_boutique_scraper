@@ -174,6 +174,10 @@ The script logs its progress to the console, including:
   ```bash
   playwright install chromium
   ```
+- Also install playwright dependencies using:
+  ```bash
+  playwright install-deps
+  ```
 
 ---
 
