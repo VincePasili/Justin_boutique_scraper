@@ -2,3 +2,5 @@ venv
 dev
 /output/
 *.csv
+.env
+/__pycache__/

@@ -11,3 +11,6 @@ six
 typing_extensions
 requests
 bs4
+supabase
+python-dotenv
+validate_email_address
