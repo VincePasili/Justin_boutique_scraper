@@ -1,0 +1,55 @@
+services:
+  scraper1:
+    build: .
+    container_name: scraper1
+    networks:
+      scraper_net:
+        ipv4_address: 172.25.0.11
+    volumes:
+      - .:/app
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+
+  scraper2:
+    build: .
+    container_name: scraper2
+    networks:
+      scraper_net:
+        ipv4_address: 172.25.0.12
+    volumes:
+      - .:/app
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+
+  scraper3:
+    build: .
+    container_name: scraper3
+    networks:
+      scraper_net:
+        ipv4_address: 172.25.0.13
+    volumes:
+      - .:/app
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+
+  scraper4:
+    build: .
+    container_name: scraper4
+    networks:
+      scraper_net:
+        ipv4_address: 172.25.0.14
+    volumes:
+      - .:/app
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+
+networks:
+  scraper_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/24

@@ -416,8 +416,8 @@ def main():
                 print(f"[Main] No records in DB for '{city_str}' -> skipping email/IG scraping.")
 
             # 7) Wait 60s
-            print("[Main] Done with this city. Waiting 60s before next city...")
-            time.sleep(60)
+            print("[Main] Done with this city. Waiting 120s before next city...")
+            time.sleep(120)
 
             # 8) Update resume index after each row
             update_resume_index(j + 1)
